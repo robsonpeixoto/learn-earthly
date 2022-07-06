@@ -1,5 +1,5 @@
 VERSION 0.6
-FROM golang:1.13-alpine3.11
+FROM golang:1.18-alpine3.16
 
 build:
   COPY main.go .
