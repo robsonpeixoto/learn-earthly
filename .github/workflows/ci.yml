@@ -22,5 +22,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: what version is installed?
         run: earthly --version
-      - name: run the earthly hello world
+      - name: build
         run: earthly +build
