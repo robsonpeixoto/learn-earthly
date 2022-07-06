@@ -2,6 +2,7 @@ name: ci
 
 on:
   push:
+    tags: ["v*.*.*"]
     branches: [main]
   pull_request:
     branches: [main]
@@ -35,4 +36,4 @@ jobs:
       - name: what version is installed?
         run: earthly --version
       - name: build
-        run: earthly +build
+        run: earthly --push +build
