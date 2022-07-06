@@ -4,4 +4,6 @@ FROM golang:1.13-alpine3.11
 build:
   COPY main.go .
   RUN go build main.go
-  SAVE ARTIFACT main AS LOCAL main
+  ARG EARTHLY_TARGET_TAG_DOCKER
+  SAVE IMAGE --push ghcr.io/robsonpeixoto/learn-earthly:${EARTHLY_TARGET_TAG_DOCKER}
+
